@@ -20,4 +20,12 @@ class MultiplesTest< MiniTest::Test
     result = multiple.multiples
     assert_equal result, projected
   end
+
+  def test_finds_multiple_of_five
+    multiple = Multiple.new(5, 10)
+
+    projected = [5]
+    result = multiple.multiples
+    assert_equal result, projected
+  end
 end
