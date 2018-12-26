@@ -8,7 +8,7 @@ class Project
   end
 
   def full_arr
-    (@mult_1 + @mult_2).sort
+    (@mult_1 + @mult_2).sort.uniq
   end
 
   def sum
