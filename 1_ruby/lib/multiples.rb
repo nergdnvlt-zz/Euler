@@ -1,5 +1,3 @@
-require 'pry'
-
 class Multiple
   attr_reader :number, :end_num
 

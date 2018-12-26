@@ -11,6 +11,14 @@ class ProjectTest< MiniTest::Test
     assert_instance_of Project, project
   end
 
+  def test_finds_full_array
+    project = Project.new(10, 3, 5)
+
+    projected = [3, 5, 6, 9]
+    result = project.full_arr
+    assert_equal result, projected
+  end
+
   def test_finds_sum_of_all_multiples
     project = Project.new(10, 3, 5)
 
