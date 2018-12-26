@@ -9,23 +9,19 @@ class MultiplesTest< MiniTest::Test
     multiple = Multiple.new(1, 5)
 
     assert_instance_of Multiple, multiple
-    assert_equal multiple.number, 1
-    assert_equal multiple.end_num, 5
   end
 
   def test_finds_multiple_of_three
-    multiple = Multiple.new(3, 10)
+    result = Multiple.multiples(3, 10)
 
     projected = [3, 6, 9]
-    result = multiple.multiples
     assert_equal result, projected
   end
 
   def test_finds_multiple_of_five
-    multiple = Multiple.new(5, 10)
+    result = Multiple.multiples(5, 10)
 
     projected = [5]
-    result = multiple.multiples
     assert_equal result, projected
   end
 end

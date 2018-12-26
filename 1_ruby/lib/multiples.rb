@@ -1,9 +1,6 @@
 class Multiple
-  attr_reader :number, :end_num
-
-  def initialize(number, end_num)
-    @number = number
-    @end_num = end_num
+  def self.multiples(number, end_num)
+    new(number, end_num).multiples
   end
 
   def multiples
@@ -13,5 +10,12 @@ class Multiple
         num
       end
     end.compact.reverse
+  end
+
+  private
+
+  def initialize(number, end_num)
+    @number = number
+    @end_num = end_num
   end
 end
