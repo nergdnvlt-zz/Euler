@@ -51,4 +51,11 @@ class FibonacciTest < MiniTest::Test
 
     assert_equal expected, result
   end
+
+  def test_class_method_sequence_to_10
+    result = Fibonacci.sequence(10)
+    expected = [1, 2, 3, 5, 8]
+
+    assert_equal expected, result
+  end
 end

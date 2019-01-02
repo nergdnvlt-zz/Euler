@@ -1,5 +1,8 @@
-require './lib/even_fibs'
+require './lib/sum_evens'
 
-result = Even_fibs.sum
+print 'Enter an end number: '
+end_num = gets.chomp.to_i
+
+result = SumEvens.result(end_num)
 
 puts "Your number is #{result}."

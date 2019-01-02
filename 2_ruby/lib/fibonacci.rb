@@ -1,14 +1,20 @@
 # Finds the fibonacci sequence under a given input
 class Fibonacci
-  def initialize(end_num)
-    @end_num = end_num
-    @seq = [1]
+  def self.sequence(end_num)
+    new(end_num).sequence
   end
 
   def sequence
     return @seq if @end_num == 1
 
     build_seq[0..-2]
+  end
+
+  private
+
+  def initialize(end_num)
+    @end_num = end_num
+    @seq = [1]
   end
 
   def build_seq
