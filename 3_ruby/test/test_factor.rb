@@ -13,6 +13,14 @@ class FactorTest < MiniTest::Test
     assert_instance_of Factor, factor
   end
 
+  def test_it_gets_first_correctly
+    factor = Factor.new(13_195)
+    result = factor.first
+    expected = 5
+
+    assert_equal expected, result
+  end
+
   def test_it_builds_factor_line
     factor = Factor.new(13_195)
     result = factor.factor_line
